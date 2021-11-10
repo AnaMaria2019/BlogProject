@@ -82,6 +82,14 @@ const EditedArticles = (props) => {
 	return (
 		<React.Fragment>
 			<Container maxWidth="md" component="main">
+				<Typography
+                    gutterBottom
+                    variant="h6"
+                    component="h2"
+                    className={classes.articleTitle}
+                >
+                    Edit article:
+                </Typography>
                 <form>
                     <Grid container spacing={5} alignItems="flex-end">
                             <Grid item key={article.id} xs={12} md={12}>
@@ -141,6 +149,14 @@ const EditedArticles = (props) => {
                 </form>
 			</Container>
 			<Container maxWidth="md" component="main">
+				<Typography
+                    gutterBottom
+                    variant="h6"
+                    component="h2"
+                    className={classes.articleTitle}
+                >
+                    Create a new article:
+                </Typography>
 				<ArticleForm />
 			</Container>
 		</React.Fragment>

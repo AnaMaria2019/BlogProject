@@ -6,6 +6,8 @@ import axiosInstance from '../axios';
 
 
 function ListEditedArticles() {
+    const loggedInUser = localStorage.getItem('username', null)
+	const showUser = loggedInUser ? <h1>Logged in user is: {loggedInUser}</h1> : ''
     const ArticleLoading = LoaderComponent(EditedArticles);
     const [appState, setAppState] = useState({
         loading: false,
@@ -26,7 +28,8 @@ function ListEditedArticles() {
 
     return (
         <div className="App">
-            <h1>Edited Articles</h1>
+            {showUser}
+            <h2>Edited Articles</h2>
             <ArticleLoading
                 isLoading={appState.loading}
                 editedArticles={appState.editedArticles}

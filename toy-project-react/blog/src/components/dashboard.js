@@ -11,11 +11,15 @@ import Container from '@material-ui/core/Container';
 
 const WritersTable = (props) => {
   const { rows } = props;
+  const loggedInUser = localStorage.getItem('username', null)
   
+  const showUser = loggedInUser ? <h1>Logged in user is: {loggedInUser}</h1> : ''
+
   return (
     <React.Fragment>
       <Container maxWidth="md" component="main">
-        <h1>Writers Summary - Dashboard</h1>
+        {showUser}
+        <h2>Writers Summary - Dashboard</h2>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="writers-summary">
             <TableHead>

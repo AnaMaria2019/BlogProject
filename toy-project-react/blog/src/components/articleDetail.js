@@ -7,6 +7,8 @@ import axiosInstance from '../axios';
 
 
 function ArticleDetail() {
+    const loggedInUser = localStorage.getItem('username', null)
+	const showUser = loggedInUser ? <h1>Logged in user is: {loggedInUser}</h1> : ''
     const ArticleLoading = LoaderComponent(Article);
     const { id } = useParams();
     const [appState, setAppState] = useState({
@@ -25,10 +27,10 @@ function ArticleDetail() {
         }).catch(err => setAppState({ loading: false }))
     }, [setAppState]);
 
-
     return (
         <div className="App">
-            <h1>Article {id} Detail Page</h1>
+            {showUser}
+            <h2>Article {id} Detail Page</h2>
             <ArticleLoading
                 isLoading={appState.loading}
                 article={appState.article}

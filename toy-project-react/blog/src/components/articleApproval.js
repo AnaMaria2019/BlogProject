@@ -6,6 +6,8 @@ import axiosInstance from '../axios';
 
 
 function ArticleApproval() {
+    const loggedInUser = localStorage.getItem('username', null)
+	const showUser = loggedInUser ? <h1>Logged in user is: {loggedInUser}</h1> : ''
     const ArticleLoading = LoaderComponent(Articles);
     const [appState, setAppState] = useState({
         loading: false,
@@ -26,7 +28,8 @@ function ArticleApproval() {
 
     return (
         <div className="App">
-            <h1>Articles In-Review</h1>
+            {showUser}
+            <h2>Articles In-Review</h2>
             <ArticleLoading
                 isLoading={appState.loading}
                 articles={appState.articles}
