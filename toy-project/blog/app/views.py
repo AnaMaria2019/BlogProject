@@ -75,7 +75,6 @@ class Dashboard(APIView):
 
         for (name, id, all_articles, last_30_days_articles) in writers_articles:
             writer = {'id': id, 'name': name, 'totalArticles': all_articles, 'totalArticlesLast30': last_30_days_articles}
-
             payload.append(writer)
 
         return Response(payload)
