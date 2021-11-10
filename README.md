@@ -2,6 +2,8 @@
 
 Notes: The frontend part of the project is build using <strong>React</strong>, and the backend part with <strong>Django</strong>.
 
+You can find pictures of the project's web pages [here](https://github.com/AnaMaria2019/BlogProject/tree/master/pictures).
+
 ### Prerequisites
 
 * Django Backend Project:
