@@ -10,7 +10,6 @@ import SignIn from './components/login';
 import LogOut from './components/logout';
 import App from './App';
 import Header from './components/header';
-import Footer from './components/footer';
 import ArticleApproval from './components/articleApproval';
 import ListEditedArticles from './components/listEditedArticles';
 import ArticleDetail from './components/articleDetail';
